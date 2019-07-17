@@ -13,8 +13,8 @@ var Stack = function() {
 
   someInstance.pop = function() {
     if (count !== 0) {
-      var temp = storage[count-1];
-      delete storage[count-1];
+      var temp = storage[count - 1];
+      delete storage[count - 1];
       count--;
       return temp;
     }

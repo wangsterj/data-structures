@@ -19,21 +19,21 @@ var stackMethods = {};
 // stackMethods.storage = {};
 
 stackMethods.push = function(value) {
-	// console.log(this.count);
-	this.storage[this.count] = value;
-	this.count++;
+  // console.log(this.count);
+  this.storage[this.count] = value;
+  this.count++;
 };
 
 stackMethods.pop = function() {
-	if (this.count !== 0) {
-	  var temp = this.storage[this.count-1];
-		delete this.storage[this.count-1];
-	  this.count--;
-	  return temp;
-	}
+  if (this.count !== 0) {
+    var temp = this.storage[this.count - 1];
+    delete this.storage[this.count - 1];
+    this.count--;
+    return temp;
+  }
 };
 
 stackMethods.size = function() {
-	return this.count;
+  return this.count;
 };
 

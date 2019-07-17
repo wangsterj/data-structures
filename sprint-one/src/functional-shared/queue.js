@@ -12,21 +12,21 @@ var Queue = function() {
 
 var queueMethods = {};
 queueMethods.enqueue = function(value) {
-	this.storage[this.end] = value;
-	this.count++;
-	this.end++;
+  this.storage[this.end] = value;
+  this.count++;
+  this.end++;
 };
 queueMethods.dequeue = function() {
-	if (this.count !== 0) {
-		var temp = this.storage[this.curr];
-		delete this.storage[this.curr];
-		this.curr++;
-		this.count--;
-		return temp;
-	}
+  if (this.count !== 0) {
+    var temp = this.storage[this.curr];
+    delete this.storage[this.curr];
+    this.curr++;
+    this.count--;
+    return temp;
+  }
 };
 queueMethods.size = function() {
-	return this.count;
+  return this.count;
 };
 
 
